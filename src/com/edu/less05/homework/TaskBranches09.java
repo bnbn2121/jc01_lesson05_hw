@@ -11,9 +11,9 @@ public class TaskBranches09 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Triangle triangle = new Triangle();
-		triangle.side1 = triangle.enterNumber(scanner, 1);
-		triangle.side2 = triangle.enterNumber(scanner, 2);
-		triangle.side3 = triangle.enterNumber(scanner, 3);
+		triangle.side1 = triangle.enterSide(scanner, 1);
+		triangle.side2 = triangle.enterSide(scanner, 2);
+		triangle.side3 = triangle.enterSide(scanner, 3);
 		triangle.checkEquilateral();
 		scanner.close();
 	}
@@ -23,7 +23,7 @@ public class TaskBranches09 {
 		int side2;
 		int side3;
 
-		public int enterNumber(Scanner scanner, int countSide) {
+		public int enterSide(Scanner scanner, int countSide) {
 			int number;
 			while (true) {
 				System.out.print("введите сторону треугольника №" + countSide + ": ");
